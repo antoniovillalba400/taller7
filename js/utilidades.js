@@ -41,7 +41,7 @@ function crearDato(label, valor) {
     return p;
 }
 
-/* ── tarjeta reutilizable (RF1 y RF3) ── */
+
 function crearTarjetaPersonaje(personaje) {
     var card = crearElemento("div");
     card.classList.add("personaje-card");
