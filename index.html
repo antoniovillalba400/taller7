@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball Z</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">Dragon Ball API</a>
+        <ul class="navbar-links">
+            <li><a href="index.html">Personajes</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <h1>Explorador Dragon Ball</h1>
+        <p>Consulta personajes, detalles, planeta de origen y transformaciones.</p>
+    </header>
+
+    <!-- CONTROLES -->
+    <div class="controles">
+        <input
+            type="text"
+            id="busqueda"
+            class="busqueda-input"
+            placeholder="Buscar personaje..."
+        >
+        <select id="filtroRaza" class="raza-select">
+            <option value="">Todas las razas</option>
+        </select>
+    </div>
+
+    <!-- GRID DE PERSONAJES -->
+    <main id="personajesGrid" class="personajes-grid">
+        <div class="loading">Cargando personajes...</div>
+    </main>
+
+    <script src="js/utilidades.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

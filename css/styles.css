@@ -1,0 +1,471 @@
+/* ===== RESET Y BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0d1117;
+    color: #e6e6e6;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background-color: #0d1117;
+    border-bottom: 1px solid #21262d;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-brand {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f5c518;
+    text-decoration: none;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.navbar-links a {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+    color: #f5c518;
+}
+
+/* ===== HERO (index) ===== */
+.hero {
+    text-align: center;
+    padding: 48px 24px 24px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    font-size: 14px;
+    color: #8b949e;
+}
+
+/* ===== CONTROLES ===== */
+.controles {
+    display: flex;
+    gap: 16px;
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 0 24px;
+}
+
+.busqueda-input {
+    flex: 1;
+    padding: 10px 16px;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #e6e6e6;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.busqueda-input::placeholder { color: #8b949e; }
+.busqueda-input:focus { border-color: #f5c518; }
+
+.raza-select {
+    padding: 10px 16px;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #e6e6e6;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    min-width: 180px;
+}
+
+.raza-select:focus { border-color: #f5c518; }
+
+/* ===== GRID DE PERSONAJES ===== */
+.personajes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 32px 48px;
+}
+
+/* ===== TARJETA DE PERSONAJE ===== */
+.personaje-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+
+.personaje-card:hover {
+    transform: translateY(-3px);
+    border-color: #f5c518;
+}
+
+.card-img-wrapper {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img {
+    max-height: 195px;
+    max-width: 90%;
+    object-fit: contain;
+}
+
+.card-info {
+    padding: 12px 14px;
+}
+
+.card-nombre {
+    font-size: 14px;
+    font-weight: bold;
+    color: #f5c518;
+    margin-bottom: 6px;
+}
+
+.card-dato {
+    font-size: 12px;
+    color: #8b949e;
+    margin-bottom: 3px;
+    line-height: 1.5;
+}
+
+.card-dato strong {
+    color: #c9d1d9;
+}
+
+/* ===== BOTÓN VER DETALLE ===== */
+.btn-detalle {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 7px 16px;
+    background-color: #f5c518;
+    color: #0d1117;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-detalle:hover {
+    background-color: #e0b015;
+    transform: scale(1.03);
+}
+
+/* ===== LOADING / ERROR ===== */
+.loading {
+    text-align: center;
+    padding: 60px;
+    color: #8b949e;
+    font-size: 16px;
+}
+
+.error-msg {
+    text-align: center;
+    padding: 60px;
+    color: #f85149;
+    font-size: 16px;
+}
+
+/* ===== TABLA (utilidades del curso) ===== */
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #30363d;
+    padding: 8px;
+    color: #e6e6e6;
+}
+
+tr:nth-child(even) { background-color: #161b22; }
+tr:hover { background-color: #21262d; }
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* ===== DETALLE CONTAINER ===== */
+.detalle-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 40px 60px;
+}
+
+/* ===== RF2: FICHA DEL PERSONAJE ===== */
+.ficha-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 32px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.ficha-img-wrap {
+    background-color: #21262d;
+    border-radius: 10px;
+    width: 240px;
+    min-height: 340px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.ficha-img {
+    max-width: 220px;
+    max-height: 340px;
+    object-fit: contain;
+}
+
+.ficha-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ficha-nombre {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+.ficha-subtitulo {
+    font-size: 14px;
+    color: #8b949e;
+}
+
+/* badges Ki / ID */
+.ficha-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background-color: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 10px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 130px;
+}
+
+.badge-label {
+    font-size: 11px;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-valor {
+    font-size: 17px;
+    font-weight: bold;
+    color: #e6e6e6;
+}
+
+.badge-valor--amarillo {
+    color: #f5c518;
+}
+
+.ficha-desc {
+    font-size: 13px;
+    color: #c9d1d9;
+    line-height: 1.75;
+    max-width: 560px;
+}
+
+/* botón ver planeta */
+.btn-planeta {
+    display: inline-block;
+    padding: 9px 20px;
+    background-color: transparent;
+    color: #58a6ff;
+    border: 1.5px solid #58a6ff;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-self: flex-start;
+}
+
+.btn-planeta:hover {
+    background-color: #58a6ff22;
+}
+
+/* ===== RF2: TRANSFORMACIONES ===== */
+.seccion-titulo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.transf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.transf-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 16px 12px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: border-color 0.2s;
+}
+
+.transf-card:hover {
+    border-color: #f5c518;
+}
+
+.transf-img {
+    height: 180px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.transf-nombre {
+    font-size: 13px;
+    font-weight: bold;
+    color: #e6e6e6;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.transf-ki {
+    font-size: 12px;
+    color: #8b949e;
+    text-align: center;
+}
+
+/* ===== RF3: PÁGINA DEL PLANETA ===== */
+.planeta-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 28px 32px;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.planeta-img {
+    width: 220px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.planeta-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.planeta-nombre {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.planeta-destruido {
+    font-size: 14px;
+    font-weight: bold;
+    color: #e05c5c;
+}
+
+.planeta-activo {
+    font-size: 14px;
+    font-weight: bold;
+    color: #3fb950;
+}
+
+.planeta-desc {
+    font-size: 14px;
+    color: #8b949e;
+    line-height: 1.7;
+    max-width: 620px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+    .controles { flex-direction: column; }
+
+    .ficha-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ficha-img-wrap { width: 100%; min-height: 240px; }
+
+    .planeta-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .planeta-img { width: 100%; height: auto; }
+
+    .personajes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 16px 40px;
+    }
+}
