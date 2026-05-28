@@ -46,7 +46,7 @@ var personajes = [
     }
 ]
 
-// mostrar las tarjetas en el grid
+
 function mostrarPersonajes() {
     var grid = document.getElementById("personajesGrid")
     grid.innerHTML = ""
@@ -67,7 +67,7 @@ function mostrarPersonajes() {
     }
 }
 
-// llenar el select de razas
+
 function cargarRazas() {
     var select = document.getElementById("filtroRaza")
     var razas = []
