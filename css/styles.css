@@ -10,7 +10,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* navbar */
+
 .navbar {
     background-color: #0d1117;
     border-bottom: 1px solid #21262d;
@@ -78,7 +78,7 @@ body {
 .busqueda-input::placeholder { color: #8b949e; }
 .raza-select { min-width: 170px; }
 
-/* grid personajes */
+
 .personajes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -138,7 +138,7 @@ body {
     cursor: pointer;
 }
 
-/* detalle personaje */
+
 .detalle-container {
     max-width: 1100px;
     margin: 40px auto;
@@ -204,7 +204,7 @@ body {
     align-self: flex-start;
 }
 
-/* transformaciones */
+
 .seccion-titulo { font-size: 22px; font-weight: bold; color: white; margin-bottom: 20px; }
 
 .transf-grid {
@@ -228,7 +228,7 @@ body {
 .transf-nombre { font-size: 13px; font-weight: bold; color: #e6e6e6; text-align: center; }
 .transf-ki { font-size: 12px; color: #8b949e; }
 
-/* planeta */
+
 .planeta-card {
     background-color: #161b22;
     border: 1px solid #30363d;
