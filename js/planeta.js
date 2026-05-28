@@ -1,4 +1,4 @@
-/* ─── RF3: página del planeta ─── */
+
 
 function obtenerIdDeURL() {
     var params = new URLSearchParams(window.location.search);
@@ -9,7 +9,7 @@ function mostrarPlaneta(planeta) {
     var contenedor = document.getElementById("planetaContenido");
     contenedor.innerHTML = "";
 
-    /* ── card del planeta ── */
+  
     var card = crearElemento("div");
     card.classList.add("planeta-card");
 
@@ -40,7 +40,7 @@ function mostrarPlaneta(planeta) {
     adicionarElementoAContenedor(info, card);
     adicionarElementoAContenedor(card, contenedor);
 
-    /* ── personajes del planeta ── */
+  
     var personajes = planeta.characters || [];
     if (personajes.length > 0) {
         var titulo = crearElementoTexto("h3", "Personajes del planeta");
