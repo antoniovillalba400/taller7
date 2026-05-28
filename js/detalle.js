@@ -1,4 +1,4 @@
-/* ─── RF2: ficha del personaje ─── */
+
 
 function obtenerIdDeURL() {
     var params = new URLSearchParams(window.location.search);
@@ -9,11 +9,11 @@ function mostrarFichaPersonaje(personaje) {
     var contenedor = document.getElementById("detalleContenido");
     contenedor.innerHTML = "";
 
-    /* ── card principal ── */
+    
     var card = crearElemento("div");
     card.classList.add("ficha-card");
 
-    /* imagen */
+   
     var imgWrap = crearElemento("div");
     imgWrap.classList.add("ficha-img-wrap");
     var img = crearElementoImagen(personaje.image || "", personaje.name);
@@ -21,16 +21,16 @@ function mostrarFichaPersonaje(personaje) {
     adicionarElementoAContenedor(img, imgWrap);
     adicionarElementoAContenedor(imgWrap, card);
 
-    /* bloque derecho */
+    
     var info = crearElemento("div");
     info.classList.add("ficha-info");
 
-    /* nombre */
+   
     var nombre = crearElementoTexto("h2", personaje.name);
     nombre.classList.add("ficha-nombre");
     adicionarElementoAContenedor(nombre, info);
 
-    /* subtítulo raza - género - afiliación */
+  
     var subtitulo = crearElementoTexto("p",
         [personaje.race, personaje.gender, personaje.affiliation]
             .filter(Boolean).join(" - ")
@@ -38,7 +38,7 @@ function mostrarFichaPersonaje(personaje) {
     subtitulo.classList.add("ficha-subtitulo");
     adicionarElementoAContenedor(subtitulo, info);
 
-    /* badges Ki */
+
     var badges = crearElemento("div");
     badges.classList.add("ficha-badges");
 
@@ -74,12 +74,12 @@ function mostrarFichaPersonaje(personaje) {
     adicionarElementoAContenedor(badgeId, badges);
     adicionarElementoAContenedor(badges, info);
 
-    /* descripción */
+
     var desc = crearElementoTexto("p", personaje.description || "Sin descripción disponible.");
     desc.classList.add("ficha-desc");
     adicionarElementoAContenedor(desc, info);
 
-    /* botón ver planeta */
+   
     if (personaje.originPlanet) {
         var btnPlaneta = crearElementoTexto("button",
             "Ver planeta: " + personaje.originPlanet.name
@@ -94,7 +94,7 @@ function mostrarFichaPersonaje(personaje) {
     adicionarElementoAContenedor(info, card);
     adicionarElementoAContenedor(card, contenedor);
 
-    /* ── transformaciones ── */
+    
     if (personaje.transformations && personaje.transformations.length > 0) {
         var tituloTransf = crearElementoTexto("h3", "Transformaciones");
         tituloTransf.classList.add("seccion-titulo");
